@@ -1,0 +1,10 @@
+{
+  "name": "@yarn-monorepo-example/project-b",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "echo 'workspace(project-b) command run'"
+  }
+}
