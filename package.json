@@ -1,8 +1,17 @@
 {
   "private": true,
   "name": "yarn-monorepo-example",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "workspaces": [
-    "packages/*"
-  ]
+    "packages/*",
+    "shared/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^20",
+    "eslint": "^8",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "ramda": "^0.29.1"
+  }
 }

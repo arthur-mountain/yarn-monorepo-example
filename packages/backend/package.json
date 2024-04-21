@@ -1,6 +1,6 @@
 {
-  "name": "@yarn-monorepo-example/project-b",
-  "version": "0.0.1",
+  "name": "backend",
+  "version": "0.0.2",
   "main": "index.js",
   "license": "MIT",
   "type": "module",
