@@ -1,6 +1,10 @@
 {
   "name": "@yarn-monorepo-example/components",
+  "type": "module",
   "version": "1.0.0",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+    "target": "ESNext",
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
+    "strict": false,
+    "noEmit": true,
+    "allowJs": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "incremental": true
-  },
-  "exclude": ["node_modules"]
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": ["react", "jest", "node"]
+  }
 }
