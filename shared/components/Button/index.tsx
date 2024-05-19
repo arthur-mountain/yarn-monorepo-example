@@ -1,19 +1,6 @@
-import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import type { PropsWithChildren } from "react";
 
-const Button: React.FC<{ onPress: () => void }> = ({ onPress }) => (
-  <TouchableOpacity onPress={onPress} style={styles.button}>
-    <Text>click</Text>
-  </TouchableOpacity>
-);
-
-const styles = StyleSheet.create({
-  button: {
-    padding: 10,
-    backgroundColor: "#007bff",
-    borderRadius: 5,
-    alignItems: "center",
-  },
-});
+const Button = ({ children }: PropsWithChildren) => <button>{children}</button>;
 
 export default Button;
 /*
