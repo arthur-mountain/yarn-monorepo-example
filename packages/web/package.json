@@ -1,5 +1,5 @@
 {
-  "name": "@yarn-monorepo-example/frontend",
+  "name": "@yarn-monorepo-example/web",
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",

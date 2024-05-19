@@ -3,12 +3,11 @@
     "target": "ESNext",
     "module": "esnext",
     "moduleResolution": "node",
-    "strict": false,
+    "strict": true,
     "noEmit": true,
     "allowJs": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "types": ["react", "jest", "node"]
+    "skipLibCheck": true
   }
 }
