@@ -2,9 +2,6 @@
   "name": "@yarn-monorepo-example/backend",
   "type": "module",
   "version": "0.0.2",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.esm.js",
-  "types": "./dist/index.d.ts",
   "license": "MIT",
   "scripts": {
     "start": "echo 'workspace(project-b) command run'"
