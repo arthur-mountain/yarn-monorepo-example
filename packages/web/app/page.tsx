@@ -6,7 +6,11 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       TEST
-      <Button title="Hello React Native Web!" />
+      <Button
+        onPress={() => {
+          console.log("134");
+        }}
+      />
       <Link href="demo">To Demo</Link>
     </main>
   );

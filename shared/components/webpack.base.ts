@@ -43,10 +43,11 @@ const config: Configuration = {
     sideEffects: false,
     minimize: isProd,
   },
-  // externals: {
-  //   react: "react",
-  //   "react-dom": "react-dom",
-  // },
+  externals: {
+    react: "react",
+    "react-dom": "react-dom",
+    "react-native-web": "react-native-web",
+  },
 };
 
 export default config;

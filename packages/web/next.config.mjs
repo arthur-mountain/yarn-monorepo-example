@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  webpack: (config) => {
+    config.resolve.alias["^react-natvie$"] = "react-native-web";
+    return config;
+  },
+};
 
 /*
  *

@@ -3,22 +3,9 @@
   "type": "module",
   "version": "1.0.1",
   "license": "ISC",
-  "main": "./dist/esm/index.js",
-  "module": "./dist/esm/index.js",
-  "browser": "./dist/esm/index.js",
-  "types": "./dist/types/index.d.ts",
-  "exports": {
-    ".": {
-      "browser": "./dist/esm/index.js",
-      "import": "./dist/esm/index.js",
-      "default": "./dist/esm/index.js",
-      "types": "./dist/types/index.d.ts",
-      "button": "./Button"
-    }
-  },
-  "files": [
-    "dist"
-  ],
+  "main": "dist/index.js",
+  "module": "dist/esm/index.esm.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "build:types": "tsc",
     "build:esm": "webpack --env target=esm",
