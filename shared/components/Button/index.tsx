@@ -1,3 +1,15 @@
+import type { PropsWithChildren } from "react";
+
+type ButtonProps = PropsWithChildren;
+
+const Button = (props: ButtonProps) => {
+  return <button {...props} />;
+};
+
+export default Button;
+/*
+ *
+ *
 import type { ComponentProps } from "react";
 import { Button as RNWButton } from "react-native";
 
@@ -8,3 +20,4 @@ const Button = (props: ButtonProps) => {
 };
 
 export default Button;
+ * */

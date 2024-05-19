@@ -43,6 +43,10 @@ const config: Configuration = {
     sideEffects: false,
     minimize: isProd,
   },
+  // externals: {
+  //   react: "react",
+  //   "react-dom": "react-dom",
+  // },
 };
 
 export default config;

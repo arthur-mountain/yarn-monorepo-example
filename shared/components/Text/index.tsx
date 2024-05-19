@@ -1,4 +1,3 @@
-import React from "react";
 import type { ComponentProps } from "react";
 import { Text as RNWText } from "react-native";
 

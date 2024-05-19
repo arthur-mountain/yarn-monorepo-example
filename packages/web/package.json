@@ -2,13 +2,14 @@
   "name": "@yarn-monorepo-example/web",
   "version": "0.1.0",
   "scripts": {
-    "dev": "next dev",
+    "pre": "yarn workspace @yarn-monorepo-example/components run build",
+    "dev": "yarn run pre && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@yarn-monorepo-example/components": "1.0.0",
+    "@yarn-monorepo-example/components": "1.0.1",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"
