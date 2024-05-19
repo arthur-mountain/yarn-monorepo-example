@@ -7,3 +7,6 @@ node_modules
 dist
 bundle
 output
+
+# Typescript build info
+tsconfig.tsbuildinfo

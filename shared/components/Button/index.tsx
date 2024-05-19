@@ -1,7 +1,10 @@
-import type { PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
+import { Button as RNWButton } from "react-native";
 
-const Button = ({ children }: PropsWithChildren) => {
-  return <button type="button">{children}</button>;
+type ButtonProps = ComponentProps<typeof RNWButton>;
+
+const Button = (props: ButtonProps) => {
+  return <Button {...props} />;
 };
 
 export default Button;

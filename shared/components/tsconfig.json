@@ -1,12 +1,33 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "jsx": "preserve",
-    "incremental": true,
+    "jsx": "react-jsx",
+    "sourceMap": true,
+    "outDir": "./dist/",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "react-native": ["react-native-web"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "__tests__/**/*.test.ts",
+    "__tests__/**/*.test.tsx",
+    "vitest.*.{ts,json}"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "*webpack*",
+    "*babel*",
+    "*eslint*",
+    "*prettier*"
+  ]
 }

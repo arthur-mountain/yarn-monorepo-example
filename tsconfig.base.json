@@ -12,7 +12,6 @@
     "incremental": true,
     "declaration": true,
     "noEmit": false,
-    "noEmitOnError": true,
     "types": ["vitest/globals"]
   }
 }
