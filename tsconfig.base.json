@@ -4,10 +4,15 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
-    "noEmit": true,
     "allowJs": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "declaration": true,
+    "noEmit": false,
+    "noEmitOnError": true,
+    "types": ["vitest/globals"]
   }
 }

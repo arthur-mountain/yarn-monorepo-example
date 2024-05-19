@@ -7,11 +7,18 @@
     "shared/*"
   ],
   "devDependencies": {
+    "@testing-library/react": "^15.0.7",
     "@types/node": "^20",
+    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^9.3.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^1.6.0"
   },
   "dependencies": {
     "ramda": "^0.30.0"
+  },
+  "scripts": {
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
   }
 }
