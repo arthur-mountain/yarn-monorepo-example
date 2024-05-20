@@ -11,8 +11,7 @@
     "declarationMap": true,
     "emitDeclarationOnly": true,
     "paths": {
-      "@/*": ["./*"],
-      "react-native": ["react-native-web"]
+      "@/*": ["./*"]
     }
   },
   "include": [

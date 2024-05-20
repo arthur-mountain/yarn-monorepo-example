@@ -18,6 +18,9 @@ const config: Configuration = {
   mode: isProd ? "production" : "development",
   // devtool: isProd ? "source-map" : "eval",
   resolve: {
+    alias: {
+      "react-native$": "react-native-web",
+    },
     extensions: [".tsx", ".ts", ".js", ".jsx"],
     extensionAlias: {
       ".js": [".js", ".ts"],
@@ -32,6 +35,10 @@ const config: Configuration = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
+          options: {
+            presets: ["module:metro-react-native-babel-preset"],
+            plugins: ["react-native-web"],
+          },
         },
       },
     ],

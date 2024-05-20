@@ -1,24 +1,7 @@
-import { Text, TouchableOpacity, StyleSheet } from "react-native";
+import type { PropsWithChildren } from "react";
 
-const Button = ({ label, onPress }: { label: string; onPress: () => void }) => {
-  return (
-    <TouchableOpacity style={styles.button} onPress={onPress}>
-      <Text style={styles.buttonText}>{label}</Text>
-    </TouchableOpacity>
-  );
+const Button = (props: PropsWithChildren) => {
+  return <button {...props} />;
 };
 
-const styles = StyleSheet.create({
-  button: {
-    backgroundColor: "#007bff",
-    padding: 10,
-    borderRadius: 4,
-    alignItems: "center",
-  },
-  buttonText: {
-    color: "white",
-    fontSize: 16,
-  },
-});
-
-export { Button };
+export default Button;
