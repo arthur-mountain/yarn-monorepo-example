@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       TEST
-      <Button>134</Button>
+      <Button label="1324" onPress={() => {}} />
       <Link href="demo">To Demo</Link>
     </main>
   );

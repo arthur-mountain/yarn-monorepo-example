@@ -13,13 +13,14 @@ const config: Configuration = {
     index: "./index",
   },
   output: {
+    // library: "@yarn-monorepo-example/components",
     clean: true,
   },
   mode: isProd ? "production" : "development",
   // devtool: isProd ? "source-map" : "eval",
   resolve: {
     alias: {
-      "react-native": "react-native-web",
+      "react-native$": "react-native-web",
     },
     extensions: [".tsx", ".ts", ".js", ".jsx"],
     extensionAlias: {
@@ -35,6 +36,10 @@ const config: Configuration = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
+          options: {
+            presets: ["module:metro-react-native-babel-preset"],
+            plugins: ["react-native-web"],
+          },
         },
       },
     ],
@@ -42,11 +47,6 @@ const config: Configuration = {
   optimization: {
     sideEffects: false,
     minimize: isProd,
-  },
-  externals: {
-    react: "react",
-    "react-dom": "react-dom",
-    "react-native-web": "react-native-web",
   },
 };
 

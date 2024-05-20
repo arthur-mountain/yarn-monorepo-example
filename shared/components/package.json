@@ -4,8 +4,12 @@
   "version": "1.0.1",
   "license": "ISC",
   "main": "dist/umd/index.js",
-  "module": "dist/esm/index.esm.js",
+  "module": "dist/umd/index.js",
+  "browser": "dist/esm/index.js",
+  "unpkg": "dist/umd/index.js",
+  "umd:main": "dist/umd/index.js",
   "types": "dist/types/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "build:types": "tsc",
     "build:esm": "webpack --env target=esm",
@@ -14,6 +18,7 @@
     "build": "webpack --mode production && yarn run build:types"
   },
   "dependencies": {
+    "metro-react-native-babel-preset": "^0.77.0",
     "react": "^18",
     "react-dom": "^18",
     "react-native-web": "^0.19.11"

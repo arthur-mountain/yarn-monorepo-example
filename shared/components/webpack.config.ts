@@ -2,6 +2,8 @@ import type { Configuration } from "webpack";
 import baseConfig from "./webpack.base";
 import path from "node:path";
 
+// TODO: verify the externals does not build the dependencies to bundle
+
 const esmConfig: Configuration = {
   ...baseConfig,
   output: {
@@ -17,6 +19,11 @@ const esmConfig: Configuration = {
   },
   experiments: {
     outputModule: true,
+  },
+  externals: {
+    react: "react",
+    "react-dom": "react-dom",
+    "react-native-web": "react-native-web",
   },
 };
 
@@ -36,7 +43,13 @@ const umdConfig: Configuration = {
     ...baseConfig.output,
     path: path.resolve(__dirname, "dist/umd"),
     filename: "[name].js",
-    libraryTarget: "umd2",
+    libraryTarget: "umd",
+    umdNamedDefine: true,
+  },
+  externals: {
+    react: "React",
+    "react-dom": "ReactDOM",
+    "react-native-web": "ReactNativeWeb",
   },
 };
 

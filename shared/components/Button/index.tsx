@@ -1,19 +1,24 @@
-import type { PropsWithChildren } from "react";
+import { Text, TouchableOpacity, StyleSheet } from "react-native";
 
-const Button = ({ children }: PropsWithChildren) => <button>{children}</button>;
-
-export default Button;
-/*
- *
- *
-import type { ComponentProps } from "react";
-import { Button as RNWButton } from "react-native";
-
-type ButtonProps = ComponentProps<typeof RNWButton>;
-
-const Button = (props: ButtonProps) => {
-  return <Button {...props} />;
+const Button = ({ label, onPress }: { label: string; onPress: () => void }) => {
+  return (
+    <TouchableOpacity style={styles.button} onPress={onPress}>
+      <Text style={styles.buttonText}>{label}</Text>
+    </TouchableOpacity>
+  );
 };
 
-export default Button;
- * */
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: "#007bff",
+    padding: 10,
+    borderRadius: 4,
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+  },
+});
+
+export { Button };
