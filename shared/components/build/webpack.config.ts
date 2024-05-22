@@ -2,13 +2,17 @@ import type { Configuration } from "webpack";
 import baseConfig from "./webpack.base";
 import path from "node:path";
 
+const resovle = (outputPath: string) => {
+  return path.join(__dirname, "..", outputPath);
+};
+
 // TODO: check the externals does not build the dependencies to bundle
 
 const esmConfig: Configuration = {
   ...baseConfig,
   output: {
     ...baseConfig.output,
-    path: path.resolve(__dirname, "dist/esm"),
+    path: resovle("dist/esm"),
     filename: "[name].js",
     libraryTarget: "module",
     module: true,
@@ -30,7 +34,7 @@ const cjsConfig: Configuration = {
   ...baseConfig,
   output: {
     ...baseConfig.output,
-    path: path.resolve(__dirname, "dist/cjs"),
+    path: resovle("dist/cjs"),
     filename: "[name].js",
     libraryTarget: "commonjs2",
   },
@@ -40,7 +44,7 @@ const umdConfig: Configuration = {
   ...baseConfig,
   output: {
     ...baseConfig.output,
-    path: path.resolve(__dirname, "dist/umd"),
+    path: resovle("dist/umd"),
     filename: "[name].js",
     libraryTarget: "umd",
     umdNamedDefine: true,
