@@ -3,13 +3,16 @@
   "type": "module",
   "version": "1.0.1",
   "license": "ISC",
+  "sideEffects": false,
   "types": "dist/types/index.d.ts",
   "module": "dist/esm/index.js",
   "browser": "dist/esm/index.js",
   "main": "dist/umd/index.js",
   "unpkg": "dist/umd/index.js",
   "umd:main": "dist/umd/index.js",
-  "sideEffects": false,
+  "exports": {
+    ".": "./core"
+  },
   "scripts": {
     "build:types": "tsc",
     "build:esm": "webpack --config ./build/webpack.config.esm.ts",
