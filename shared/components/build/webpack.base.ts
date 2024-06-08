@@ -8,7 +8,6 @@ import { name, scripts } from "../package.json";
 const modeIndex = argv.indexOf("--mode");
 
 const resovleRootDir = (outputPath: string) => {
-  console.log("__dirname: ", __dirname);
   return join(__dirname, "..", outputPath);
 };
 
@@ -86,11 +85,13 @@ const baseConfig: Configuration = {
     sideEffects: false,
     minimize: isProd,
   },
-  watchOptions: {
-    aggregateTimeout: 300, // Delay the rebuilt after 300ms
-    poll: 3000, // Check for changes every second
-    ignored: /node_modules/,
-  },
+  ...(!isProd && {
+    watchOptions: {
+      aggregateTimeout: 300, // Delay the rebuilt after 300ms
+      poll: 3000, // Check for changes every second
+      ignored: /node_modules/,
+    },
+  }),
 };
 
 export default baseConfig;
