@@ -2,10 +2,9 @@
   "name": "@yarn-monorepo-example/web",
   "version": "0.1.0",
   "scripts": {
-    "pre:dev": "yarn workspace @yarn-monorepo-example/components dev",
-    "pre:build": "yarn workspace @yarn-monorepo-example/components build",
-    "dev": "yarn run pre:dev && next dev",
-    "build": "yarn run pre:build && next build",
+    "shared:components": "yarn workspace @yarn-monorepo-example/components",
+    "dev": "yarn run shared:components build:esm && next dev",
+    "build": "yarn run shared:components build && next build",
     "start": "next start",
     "lint": "next lint"
   },
