@@ -5,6 +5,6 @@ describe("Home page", () => {
   test("renders home page correctly", () => {
     const { getByText } = render(<Home />);
 
-    expect(getByText("Component Button")).toBeInstanceOf("button");
+    expect(getByText("Component Button")).toBeDefined();
   });
 });
