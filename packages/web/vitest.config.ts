@@ -1,3 +1,4 @@
+// FIXME:: Seems does not applied when test run
 import { defineConfig, configDefaults } from "vitest/config";
 import react from "@vitejs/plugin-react";
 
