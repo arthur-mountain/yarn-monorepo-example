@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./*"]
@@ -16,7 +16,8 @@
     ".next/types/**/*.ts",
     "__tests__/**/*.test.ts",
     "__tests__/**/*.test.tsx",
-    "vitest.*.{ts,json}"
+    "vitest.*.ts",
+    "vitest.*.json"
   ],
   "exclude": ["node_modules"]
 }
