@@ -2,9 +2,10 @@
   "name": "@yarn-monorepo-example/web",
   "version": "0.1.0",
   "scripts": {
-    "pre": "yarn workspace @yarn-monorepo-example/components run build",
-    "dev": "yarn run pre && next dev",
-    "build": "next build",
+    "pre:dev": "yarn workspace @yarn-monorepo-example/components dev",
+    "pre:build": "yarn workspace @yarn-monorepo-example/components build",
+    "dev": "yarn run pre:dev && next dev",
+    "build": "yarn run pre:build && next build",
     "start": "next start",
     "lint": "next lint"
   },
