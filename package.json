@@ -27,9 +27,6 @@
     "webpack-dev-server": "^5.0.4",
     "typescript": "^5"
   },
-  "dependencies": {
-    "ramda": "^0.30.0"
-  },
   "scripts": {
     "test": "vitest",
     "test:coverage": "vitest run --coverage"
