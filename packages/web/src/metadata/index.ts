@@ -1,0 +1,1 @@
+export { globalsMetadata } from "./globals";

@@ -5,5 +5,6 @@
   "license": "MIT",
   "scripts": {
     "start": "echo 'workspace(project-b) command run'"
-  }
+  },
+  "dependencies": {}
 }

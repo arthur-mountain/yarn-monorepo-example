@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@yarn-monorepo-example/components": "*",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.3.0",
+    "@yarn-monorepo-example/components": "*"
   },
   "devDependencies": {
     "@types/react": "^18",

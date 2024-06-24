@@ -1,9 +1,9 @@
 import { render } from "@testing-library/react";
-import Home from "../page";
+import HomePage from "../page";
 
 describe("Home page", () => {
   test("renders home page correctly", () => {
-    const { getByText } = render(<Home />);
+    const { getByText } = render(<HomePage />);
 
     expect(getByText("Component Button")).toBeDefined();
   });
