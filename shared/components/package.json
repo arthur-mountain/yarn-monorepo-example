@@ -1,8 +1,22 @@
 {
   "name": "@yarn-monorepo-example/components",
+  "version": "0.0.1",
   "type": "module",
-  "version": "1.0.1",
   "license": "ISC",
+  "author": "arthur-mountain",
+  "description": "A demo of a monorepo using yarn workspaces",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arthur-mountain/yarn-monorepo-example"
+  },
+  "bugs": {
+    "url": "https://github.com/arthur-mountain/yarn-monorepo-example/issues"
+  },
+  "homepage": "https://github.com/arthur-mountain/yarn-monorepo-example",
+  "keywords": [
+    "react",
+    "components"
+  ],
   "sideEffects": false,
   "types": "dist/types/index.d.ts",
   "module": "dist/esm/index.js",
