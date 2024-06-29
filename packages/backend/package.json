@@ -1,5 +1,5 @@
 {
-  "name": "@yarn-monorepo-example/backend",
+  "name": "@arthur-mountain/yarn-monorepo-demo-backend",
   "type": "module",
   "version": "0.0.2",
   "license": "MIT",

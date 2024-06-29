@@ -1,8 +1,8 @@
 {
-  "name": "@yarn-monorepo-example/web",
+  "name": "@arthur-mountain/yarn-monorepo-demo-web",
   "version": "0.1.0",
   "scripts": {
-    "shared:components": "yarn workspace @yarn-monorepo-example/components",
+    "shared:components": "yarn workspace @arthur-mountain/yarn-monorepo-demo-components",
     "dev": "yarn run shared:components build:esm && next dev",
     "build": "yarn run shared:components build && next build",
     "start": "next start",

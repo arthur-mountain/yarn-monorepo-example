@@ -2,7 +2,7 @@
 
 1. entry: 「單一字串」or「一個 mapping」, 如果是用 mapping 會產出多個 chunk(s)
 
-2. output: 指定 「輸出位置」、「輸出黨名」、「輸出格式(esm,cjs, umd, etc)」、「輸出前，先清除前一個輸出(e.g. dist)」等
+2. output: 指定 「輸出位置」、「輸出檔名」、「輸出格式(esm,cjs, umd, etc)」、「輸出前，先清除前一個輸出(e.g. dist)」等
 
 3. mode: 指定環境， `development` or `production`
 

@@ -1,6 +1,6 @@
 {
-  "name": "@yarn-monorepo-example/components",
-  "version": "0.0.1",
+  "name": "@arthur-mountain/yarn-monorepo-demo-components",
+  "version": "0.0.2",
   "type": "module",
   "license": "ISC",
   "author": "arthur-mountain",
