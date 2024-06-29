@@ -1,13 +1,14 @@
 {
   "name": "@arthur-mountain/yarn-monorepo-demo-components",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "license": "MIT",
   "author": "arthur-mountain",
   "description": "A demo of a monorepo using yarn workspaces",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arthur-mountain/yarn-monorepo-example"
+    "url": "https://github.com/arthur-mountain/yarn-monorepo-example",
+    "directory": "shared/components"
   },
   "bugs": {
     "url": "https://github.com/arthur-mountain/yarn-monorepo-example/issues"
