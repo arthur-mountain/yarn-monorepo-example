@@ -1,32 +1,32 @@
 ### Webpack
 
-1. entry: 「單一字串」or「一個 mapping」, 如果是用 mapping 會產出多個 chunk(s)
+1. entry: "string" or "mapping", if using mapping, multiple chunks will be produced.
 
-2. output: 指定 「輸出位置」、「輸出檔名」、「輸出格式(esm,cjs, umd, etc)」、「輸出前，先清除前一個輸出(e.g. dist)」等
+2. output: Specify "output location", "output filename", "output format (esm, cjs, umd, etc.)", "clear previous output (e.g. dist) before outputting", etc.
 
-3. mode: 指定環境， `development` or `production`
+3. mode: Specify the environment, `development` or `production`.
 
-4. devtool: 是否建立 sourcemap
+4. devtool: Whether to generate sourcemap.
 
-5. resolve: 指定檔案路徑、副檔名、alias;
+5. resolve: Specify file path, extensions, aliases;
 
-6. module: 指定 loader(s)
+6. module: Specify loader(s)
 
-- test: 指定檔案名稱, string or RegExp
-- exclude: 排除檔案
-- use: 指定 loader, string or object(可以帶 options 參數)
+   - test: Specify filename, string or RegExp
+   - exclude: Exclude files
+   - use: Specify loader, string or object (can carry options parameter)
 
-7. optimization: 指定是否直接 tree-shaking(sideEffects)、是否壓縮程度(minimize)
+7. optimization: Specify whether to directly tree-shaking (sideEffects), and the degree of compression (minimize).
 
-8. webpack.config.js: 可以直接輸出 object，或是 function(接收 env 參數)
+8. webpack.config.js: Can directly output an object or a function (receives env parameter).
 
 ---
 
 ## TypeScript
 
-1. 只建立 declaration file，不編譯的話，可以:
-   - outDir: 指定輸出位置
-   - declaration: 是否產生 .d.ts files
-   - declarationDir: 指定 .d.ts files 輸出位置
-   - declarationMap: 是否產生 .d.ts.map
-   - emitDeclarationOnly: 是否只建立 declaration file，不編譯
+1. To generate declaration files only without compiling, you can:
+   - outDir: Specify output location
+   - declaration: Whether to generate .d.ts files
+   - declarationDir: Specify .d.ts files output location
+   - declarationMap: Whether to generate .d.ts.map
+   - emitDeclarationOnly: Whether to generate declaration files only without compiling.
