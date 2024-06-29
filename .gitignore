@@ -2,6 +2,7 @@ node_modules
 
 # Environment
 .env*
+.npmrc
 
 # Bundle output
 dist
@@ -9,4 +10,6 @@ bundle
 output
 
 # Typescript build info
-tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+

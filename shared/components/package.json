@@ -1,8 +1,8 @@
 {
   "name": "@arthur-mountain/yarn-monorepo-demo-components",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "type": "module",
-  "license": "ISC",
+  "license": "MIT",
   "author": "arthur-mountain",
   "description": "A demo of a monorepo using yarn workspaces",
   "repository": {
@@ -17,6 +17,12 @@
     "react",
     "components"
   ],
+  "files": [
+    "dist/cjs",
+    "dist/esm",
+    "dist/umd",
+    "dist/types"
+  ],
   "sideEffects": false,
   "types": "dist/types/index.d.ts",
   "module": "dist/esm/index.js",
@@ -28,6 +34,7 @@
     ".": "./core"
   },
   "scripts": {
+    "prepublishOnly": "yarn workspace @arthur-mountain/yarn-monorepo-demo-components build",
     "build:types": "tsc",
     "build:esm": "webpack --config ./build/webpack.config.esm.ts",
     "build:cjs": "webpack --config ./build/webpack.config.cjs.ts",
