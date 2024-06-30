@@ -1,0 +1,17 @@
+{
+  "name": "@arthur-mountain/yarn-monorepo-demo-scripts",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "index",
+  "license": "MIT",
+  "author": "arthur-mountain",
+  "description": "A set of scrpits for monorepo using yarn workspaces",
+  "scripts": {
+    "test": "echo 'test'",
+    "components:build": "node ./components/build.js"
+  },
+  "imports": {
+    "#": ".",
+    "#utils": "./utils/index.js"
+  }
+}
