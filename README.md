@@ -72,3 +72,53 @@ Note: version is required
      }
    }
    ```
+
+---
+
+##### Title: The Command in Workspace That Requires Another Workspace Command to Run First
+
+For Example: If package-a requires package-b to be built first.
+
+1. Using the `pre` option in the package.json file.
+
+```package.json
+{
+  "name": "@yarn-monorepo-example/package-a",
+  "version": "0.0.1",
+  "scripts": {
+    "prebuild": "yarn workspace @yarn-monorepo-example/package-b build"
+    "build":"next build"
+  }
+}
+```
+
+or using the `&&` operator in the script.
+
+```package.json
+{
+  "name": "@yarn-monorepo-example/package-a",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "yarn workspace @yarn-monorepo-example/package-b build && next build"
+  }
+}
+```
+
+2. Managing Custom Commands in Scripts.
+
+```build.js
+const { execSync } = require('child_process');
+
+function buildProject(name) {
+  console.log(`Building ${name}...`);
+  execSync(`yarn workspace ${name} build`, { stdio: 'inherit' });
+}
+
+// Build in order
+buildProject('package-a');
+buildProject('package-b');
+```
+
+Conclusion:
+More often, we use monorepo tools like NX, Lerna, Turbo, Rush, Bazel, etc., which can handle this kind of problem.
+They also provide features like caching, remote execution, etc.
