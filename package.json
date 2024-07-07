@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "workspaces": [
     "packages/*",
-    "shared/*",
-    "scripts/*"
+    "shared/*"
   ],
   "devDependencies": {
     "@babel/core": "^7.24.5",
